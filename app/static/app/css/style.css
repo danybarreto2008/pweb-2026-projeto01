@@ -125,3 +125,180 @@ footer {
     width: 100%;
     z-index: 10;
 }
+
+@media (max-width: 1024px) {
+    .container-inicio {
+        grid-template-columns: 1fr 1fr; 
+        gap: 40px;
+    }
+    
+    .coluna-imagem-principal {
+        grid-column: span 2; 
+        justify-content: center;
+    }
+
+    .img-protagonistas {
+        position: relative; 
+        bottom: 0;
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        padding: 20px;
+        text-align: center;
+    }
+
+    .navbar ul {
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .container-inicio {
+        grid-template-columns: 1fr; 
+        padding: 20px;
+        text-align: center;
+    }
+
+    .coluna-info, .coluna-curiosidade {
+        width: 100%;
+    }
+
+    
+    .img-tablet {
+        position: relative; 
+        top: 0;
+        left: 0;
+        width: 200px;
+        margin: 0 auto 20px;
+        display: block;
+        opacity: 1;
+        transform: none;
+    }
+
+    .img-gadgets {
+        margin: 20px auto;
+    }
+
+    .img-protagonistas {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    footer {
+        position: relative; 
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/*  página de Elenco */
+.pagina-elenco {
+    background-color: #d88cb4;
+    min-height: calc(100vh - 160px); 
+    padding: 40px 60px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: relative;
+}
+
+.card-personagem {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.moldura-gadget {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moldura-gadget img {
+    width: 200px;
+    height: auto;      
+    object-fit: contain; 
+}
+
+.info-personagem {
+    width: 100%;
+    padding-left: 5px;
+}
+
+.info-personagem p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    color: #000;
+}
+
+.container-carro {
+    position: fixed;
+    bottom: 0; 
+    right: 20px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.img-carro-elenco {
+    width: 700px;
+    opacity: 0.9;
+}
+
+@media (max-width: 1100px) {
+    .img-carro-elenco {
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-elenco {
+        padding: 20px;
+    }
+    
+    .container-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-personagem {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .img-carro-elenco {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 20px auto;
+    }
+    
+    .container-carro {
+        position: static;
+        text-align: center;
+    }
+}
+

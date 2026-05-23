@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="pagina-elenco">
+    <div class="container-cards">
+        {% for personagem in elenco %}
+        <div class="card-personagem">
+            <div class="moldura-gadget">
+                <img src="{% static personagem.imagem %}" alt="{{ personagem.nome }}">
+            </div>
+            <div class="info-personagem">
+                <p><strong>nome:</strong> {{ personagem.nome }}</p>
+                <p><strong>idade:</strong> {{ personagem.idade }}</p>
+                <p><strong>posição:</strong> {{ personagem.posicao }}</p>
+                <p><strong>local:</strong> {{ personagem.local }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Imagem do carro no canto inferior -->
+    <div class="container-carro">
+        <img src="{% static 'app/img/carroelenco.png' %}" class="img-carro-elenco">
+    </div>
+</main>
+{% endblock %}
