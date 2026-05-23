@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container-inicio">
+    <!-- Lado Esquerdo -->
+    <div class="coluna-info">
+        <div class="card-tablet">
+            <img src="{% static 'app/img/tabletinicio.png' %}" class="img-tablet">
+            <div class="texto-sobre-tablet">
+                <h3>Informações gerais</h3>
+                <p>Nome original: {{ serie.nome }}</p>
+                <p>Estreia: {{ serie.estreia }}</p>
+                <p>Gênero: {{ serie.genero }}</p>
+                <p>Público-alvo: {{ serie.publico }}</p>
+                <p>Estilo: {{ serie.estilo }}</p>
+            </div>
+        </div>
+        
+        <div class="sobre-desenho">
+            <h3>Sobre o desenho</h3>
+            <p>Cada episódio mostra as meninas tentando equilibrar a vida escolar com missões secretas. O desenho ficou famoso pelos gadgets tecnológicos e pelas transformações das personagens em espiãs.</p>
+        </div>
+    </div>
+
+    <!-- Centro -->
+    <div class="coluna-curiosidade">
+        <h3>Curiosidade</h3>
+        <p>O visual colorido e o estilo das personagens ajudaram o desenho a virar um ícone dos anos 2000, e a série ganhou novas temporadas muitos anos depois do lançamento original.</p>
+        <img src="{% static 'app/img/equipamentosinicio.png' %}" class="img-gadgets">
+    </div>
+
+    <!-- Lado Direito -->
+    <div class="coluna-imagem-principal">
+        <img src="{% static 'app/img/imageminicio.png' %}" class="img-protagonistas">
+    </div>
+</section>
+{% endblock %}

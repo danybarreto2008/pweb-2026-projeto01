@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Totally Spies! - Projeto</title>
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="{% static 'app/img/logomenu.png' %}" alt="Logo" class="logo">
+            <ul>
+                <li><a href="{% url 'inicio' %}">inicio</a></li>
+                <li><a href="{% url 'equipe' %}">elenco/protagonistas</a></li>
+                <li><a href="{% url 'sobre' %}">sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- O conteúdo das outras páginas entra aqui -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 pweb. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
