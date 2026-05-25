@@ -1,0 +1,26 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="pagina-sobre">
+    <div class="coluna-imagem-sobre">
+        <img src="{% static 'app/img/imagemsobre.png' %}" alt="Personagens e Jerry">
+    </div>
+
+    <div class="coluna-texto-sobre">
+        <h2>{{ info.titulo }}</h2>
+        
+        <div class="texto-conteudo">
+            <p>{{ info.objetivo }}</p>
+            <p>{{ info.projeto }}</p>
+            
+            <div class="info-detalhes">
+                <p><strong>Tecnologias utilizadas:</strong> {{ info.tecnologias }}</p>
+                <p><strong>Desenvolvedora:</strong> {{ info.desenvolvedora }}</p>
+                <p><strong>Instituição:</strong> {{ info.instituicao }}</p>
+                <p><strong>Ano:</strong> {{ info.ano }}</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

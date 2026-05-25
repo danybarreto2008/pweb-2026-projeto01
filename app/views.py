@@ -44,4 +44,13 @@ def equipe (request):
     return render(request, 'app/equipe.html', {'elenco': lista_personagens})
 
 def sobre(request):
-    return render (request, 'app/sobre.html')
+    dados_site = {
+        'titulo': 'Sobre o Site',
+        'objetivo': 'Este site foi desenvolvido com o objetivo de divulgar informações sobre as três espiãs demais, apresentando sua história, integrantes e principais características.',
+        'projeto': 'O projeto foi criado para a disciplina de Web Design utilizando o framework Django, com páginas organizadas através de templates e navegação integrada.',
+        'tecnologias': 'HTML, CSS, Python, Django',
+        'desenvolvedora': 'Danielly Rodrigues',
+        'instituicao': 'instituto federal de educação ciência e tecnologia do rio grande do norte',
+        'ano': '2026'
+    }
+    return render(request, 'app/sobre.html', {'info': dados_site})
