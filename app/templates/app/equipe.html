@@ -7,7 +7,11 @@
         {% for personagem in elenco %}
         <div class="card-personagem">
             <div class="moldura-gadget">
-                <img src="{% static personagem.imagem %}" alt="{{ personagem.nome }}">
+                {% if personagem.imagem %}
+                <img src="{{ personagem.imagem.url }}" alt="{{ personagem.nome }}">
+                {% else %}
+                <img src="{% static 'app/img/logomenu.png' %}" alt="{{ personagem.nome }}">
+                {% endif %}
             </div>
             <div class="info-personagem">
                 <p><strong>nome:</strong> {{ personagem.nome }}</p>

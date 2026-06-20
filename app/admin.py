@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Serie, Personagem, SobreInfo
 
-# Register your models here.
+admin.site.register(Serie)
+admin.site.register(Personagem)
+admin.site.register(SobreInfo)
+
